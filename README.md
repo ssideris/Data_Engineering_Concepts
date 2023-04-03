@@ -3,4 +3,4 @@ This Repository is a personal attempt to persuade a variety of Data Engineering 
 
 Many of the included infrastructures were inspired by the DataTalksClub / data-engineering-zoomcamp.
 
-The Repository will be updated regularly with newly suggested Data Management Infrustructures and Tools.
+The Repository will be updated regularly with newly suggested Data Management Infrastructures and Tools.
