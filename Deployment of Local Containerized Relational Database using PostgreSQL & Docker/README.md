@@ -15,7 +15,9 @@ display(HTML('<div style="display: flex;"> \
 ### Table of Contents
 
 [1. Introduction](#introduction)
+
 [2. Docker & Docker Compose Installation](#docker-&-docker-compose-installation)
+
 [3. Conclusion](#conclusion)
 
 
