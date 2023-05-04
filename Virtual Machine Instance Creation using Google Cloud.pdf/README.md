@@ -117,7 +117,7 @@ That’s it! You are connected to a Virtual Machine Instance of your preference 
 ![image-19.png](Images/Picture19.png)
 
 
-### Creation of Google Cloud Service Account
+### Google Cloud Service Account Creation
 
 The Service Account is a special type of Google account intended to represent a non-human user that needs to authenticate and be authorized to access data in Google APIs. Typically, service accounts are used in scenarios such as: Running workloads on virtual machines (More info [here](https://cloud.google.com/iam/docs/service-account-overview)). 
 At first, we visit Google Cloud and choose the IAM & Admin -> Service Accounts -> CREATE SERVICE ACCOUNT from the menu on the left. 
