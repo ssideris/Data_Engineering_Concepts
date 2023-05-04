@@ -24,17 +24,13 @@ display(HTML('<div style="display: flex;"> \
 
 [1. Introduction](#introduction)
 
-[2. VM Instance Installation using Google Cloud](#vm-instance-installation-using-google-cloud)
+[2. Stack](#stack)
 
-[3. Google Cloud Service Account Creation](#google-cloud-service-account-creation)
+[3. VM Instance Installation using Google Cloud](#vm-instance-installation-using-google-cloud)
 
-[4. Conclusion](#conclusion)
+[4. Google Cloud Service Account Creation](#google-cloud-service-account-creation)
 
-### Stack
-
-• Local OS: Windows 11
-
-• VM Instance OS: Ubuntu 
+[5. Conclusion](#conclusion)
 
 ### Introduction
 
@@ -42,7 +38,11 @@ In this tutorial, I will guide you through the process of setting up a new VM in
 
 By the end of this tutorial, you will have the necessary skills to set up your own VM instances and take advantage of the many benefits that Google Cloud has to offer. So, let's get started!
 
+### Stack
 
+• Local OS: Windows 11
+
+• VM Instance OS: Ubuntu 
 
 ### VM Instance Installation using Google Cloud
 
