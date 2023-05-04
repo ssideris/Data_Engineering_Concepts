@@ -16,7 +16,7 @@ display(HTML('<div style="display: flex;"> \
 
 [1. Introduction](#introduction)
 
-[2. Docker & Docker Compose Installation](#docker-&-docker-compose-installation)
+[2. Docker and Docker Compose Installation](#docker-and-docker-compose-installation)
 
 [3. Conclusion](#conclusion)
 
@@ -26,7 +26,7 @@ display(HTML('<div style="display: flex;"> \
 
 In this tutorial, I will guide you through the process of creating a PostgreSQL container using Docker. We will cover the basics of containerization, including setting up Docker and creating a container. We will then explore the essential components of PostgreSQL, such as creating databases, tables, and users, and how to manage them using a graphical user interface. Finally, we will deploy a container that will run PostgreSQL 
 
-### Docker & Docker Compose Installation
+### Docker and Docker Compose Installation
 
 Firstly, we install the docker.io in our VM instance. To do so:
 
