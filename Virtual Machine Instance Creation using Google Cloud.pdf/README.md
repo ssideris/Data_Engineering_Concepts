@@ -22,9 +22,9 @@ display(HTML('<div style="display: flex;"> \
 
 ### Table of Contents
 
-1. [Introduction](###introduction)
+1. [Introduction](### introduction)
 
-2. [VM Instance Installation using Google Cloud](###vm-instance-installation-using-google-cloud)
+2. [VM Instance Installation using Google Cloud](### vm-instance-installation-using-google-cloud)
 
 3. [Google Cloud Service Account Creation](###google-cloud-service-account-creation)
 
