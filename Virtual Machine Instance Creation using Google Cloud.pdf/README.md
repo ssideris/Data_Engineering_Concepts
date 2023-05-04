@@ -24,7 +24,7 @@ display(HTML('<div style="display: flex;"> \
 
 [1. Introduction](#introduction)
 
-[2. Stack](#stack)
+[2. Tech Stack](#tech-stack)
 
 [3. VM Instance Installation using Google Cloud](#vm-instance-installation-using-google-cloud)
 
@@ -38,7 +38,7 @@ In this tutorial, I will guide you through the process of setting up a new VM in
 
 By the end of this tutorial, you will have the necessary skills to set up your own VM instances and take advantage of the many benefits that Google Cloud has to offer. So, let's get started!
 
-### Stack
+### Tech Stack
 
 • Local OS: Windows 11
 
