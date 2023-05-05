@@ -1,5 +1,6 @@
 # Deployment of Local Containerized Relational Database using [PostgreSQL](https://kinsta.com/knowledgebase/what-is-postgresql/) & [Docker](https://www.docker.com)
 
+
 <!--
 ```python
 from IPython.display import display, HTML
@@ -8,7 +9,7 @@ display(HTML('<div style="display: flex;"> \
                      border-radius:100%; border: 1px solid black;"/> \
              <div style="float: right; margin-left:3%"> \
              <p style=" font-size: 130%; margin-top:10%; ">By Stamatis Sideris</p> \
-             <p style="font-size: 100%;">Updated as of: May 5, 2023</p> \
+             <p style="font-size: 100%;">Updated as of: May 4, 2023</p> \
              </div> \
              </div>'))
 ```
