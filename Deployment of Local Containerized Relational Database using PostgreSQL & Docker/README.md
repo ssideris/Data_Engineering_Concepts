@@ -1,6 +1,6 @@
 # Deployment of Local Containerized Relational Database using [PostgreSQL](https://kinsta.com/knowledgebase/what-is-postgresql/) & [Docker](https://www.docker.com)
 
-
+<!--
 ```python
 from IPython.display import display, HTML
 display(HTML('<div style="display: flex;"> \
@@ -12,8 +12,9 @@ display(HTML('<div style="display: flex;"> \
              </div> \
              </div>'))
 ```
+-->
 
-<div style="display: flex;">              <img src="images/author_pic.jpg" alt="author profile pic" style="width:8%;                      border-radius:100%; border: 1px solid black;"/>              <div style="float: right; margin-left:3%">              <p style=" font-size: 130%; margin-top:10%; ">By Stamatis Sideris</p>              <p style="font-size: 100%;">Updated as of: May 5, 2023</p>              </div>              </div>
+<div style="display: flex;">              <img src="Images/author_pic.jpg" alt="author profile pic" style="width:8%;                      border-radius:100%; border: 1px solid black;"/>              <div style="float: right; margin-left:3%">              <p style=" font-size: 130%; margin-top:10%; ">By Stamatis Sideris</p>              <p style="font-size: 100%;">Updated as of: May 5, 2023</p>              </div>              </div>
 
 -------------------------------------------------------------------------------------------------------------------------------
 
