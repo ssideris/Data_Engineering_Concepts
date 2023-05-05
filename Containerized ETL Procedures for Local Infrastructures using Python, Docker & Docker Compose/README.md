@@ -35,7 +35,11 @@ display(HTML('<div style="display: flex;"> \
 
 ### Introduction
 
+ETL is a process that involves extracting data from various sources, transforming it into a useful format, and loading it into a target system. However, setting up an ETL infrastructure can be a daunting task, especially for small-scale businesses or individual developers. That's where containerization comes in handy. By using Docker and Docker Compose, you can easily package your ETL processes into a container that can be run on any machine with Docker installed, without worrying about the dependencies and setup. Python is doing all the rest.
 
+### Tech Stack
+
+Python, Docker, Docker Compose, PostgreSQL
 
 ### Anaconda Installation
 
