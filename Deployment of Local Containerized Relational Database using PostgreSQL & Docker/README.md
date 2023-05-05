@@ -1,7 +1,6 @@
 # Deployment of Local Containerized Relational Database using [PostgreSQL](https://kinsta.com/knowledgebase/what-is-postgresql/) & [Docker](https://www.docker.com)
 
 
-<!--
 ```python
 from IPython.display import display, HTML
 display(HTML('<div style="display: flex;"> \
@@ -13,7 +12,6 @@ display(HTML('<div style="display: flex;"> \
              </div> \
              </div>'))
 ```
--->
 
 <div style="display: flex;">              <img src="images/author_pic.jpg" alt="author profile pic" style="width:8%;                      border-radius:100%; border: 1px solid black;"/>              <div style="float: right; margin-left:3%">              <p style=" font-size: 130%; margin-top:10%; ">By Stamatis Sideris</p>              <p style="font-size: 100%;">Updated as of: May 5, 2023</p>              </div>              </div>
 
@@ -31,7 +29,7 @@ display(HTML('<div style="display: flex;"> \
 
 ### Introduction
 
-In this tutorial, I will guide you through the process of creating a PostgreSQL ([What is PostgreSQL](https://kinsta.com/knowledgebase/what-is-postgresql/)) container using Docker ([and what is Docker](https://www.docker.com)). We will cover the basics of containerization, including setting up Docker and creating a container. We will then explore the essential components of PostgreSQL, such as creating databases, tables, and users, and how to manage them using a graphical user interface. Finally, we will deploy a container that will run PostgreSQL 
+In this tutorial, I will guide you through the process of creating a PostgreSQL ([What is PostgreSQL?](https://kinsta.com/knowledgebase/what-is-postgresql/)) container using Docker ([and what is Docker?](https://www.docker.com)). We will cover the basics of containerization, including setting up Docker and creating a container. We will then explore the essential components of PostgreSQL, such as creating databases, tables, and users, and how to manage them using a graphical user interface. Finally, we will deploy a container that will run PostgreSQL 
 
 ### Docker and Docker Compose Installation
 
