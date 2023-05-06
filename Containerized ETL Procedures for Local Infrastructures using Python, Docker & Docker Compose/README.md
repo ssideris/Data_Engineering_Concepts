@@ -39,14 +39,15 @@ ETL is a process that involves extracting data from various sources, transformin
 
 ### Tech Stack
 
-Python, Docker, Docker Compose, PostgreSQL
+Local OS: Ubuntu
+Tools: Python, Docker, Docker Compose, PostgreSQL
 
 ### Anaconda Installation
 
 We install Anaconda as it includes Python 3.9 which we need to run in Terminal.
 Visit the [link](https://www.anaconda.com/download) and choose the installer that fits your OS. I choose the Linux Installer.
 
-![image.png](attachment:image.png)
+![image.png](Images/Picture1.png)
 
 Download it with the wget command in your terminal. 
 
@@ -55,7 +56,7 @@ Download it with the wget command in your terminal.
 wget {the link to the anaconda release}
 ```
 
-![image.png](attachment:image.png)
+![image.png](Images/Picture2.png)
 
 Install it with the bash command and choose to initialize it. Restart your terminal and Anaconda should be ready to run!
 
@@ -66,9 +67,9 @@ bash {the downloaded file}
 conda --version
 ```
 
-![image.png](attachment:image.png)
+![image.png](Images/Picture3.png)
 
-![image-2.png](attachment:image-2.png)
+![image-2.png](Images/Picture4.png)
 
 ### Docker and Docker Compose Installations
 
@@ -157,7 +158,7 @@ if __name__ == '__main__':
 
 As a result, our database should be loaded with our transformed data. To test it, we run a Select statement in postgres using pgadmin. For pgadmin configuration refer [here](https://github.com/ssideris/Data_Engineering_Concepts/tree/main/Deployment%20of%20Local%20Containerized%20Relational%20Database%20using%20PostgreSQL%20%26%20Docker).
 
-![image.png](attachment:image.png)
+![image.png](Images/Picture5.png)
 
 We create a Docker image called “ecommerce_data_local_flow”, to use it as a blueprint on creating the container that will run the etl.py and constants.py .
 
@@ -178,7 +179,7 @@ COPY data.zip data.zip
 ENTRYPOINT ["python", "etl.py", "parameters.py"]
 ```
 
-![image.png](attachment:image.png)
+![image.png](Images/Picture6.png)
 
 We then proceed on creating the image.
 
@@ -187,7 +188,7 @@ We then proceed on creating the image.
 docker build -t ecommerce_data_local_flow .
 ```
 
-![image.png](attachment:image.png)
+![image.png](Images/Picture7.png)
 
 We proceed to create the container that will run our ETL procedure via Docker.
 
@@ -196,11 +197,11 @@ We proceed to create the container that will run our ETL procedure via Docker.
 docker run -it --network=pg-network ecommerce_data_local_flow
 ```
 
-![image.png](attachment:image.png)
+![image.png](Images/Picture8.png)
 
 Back to pgAdmin and our table must be loaded with our data!
 
-![image-2.png](attachment:image-2.png)
+![image-2.png](Images/Picture9.png)
 
 The whole procedure could become much faster and maintainable by using Docker Compose. Docker Compose will use a .yaml file, where we will configure our services, to create the network that will host our services. The file would have the following structure:
 
@@ -233,7 +234,7 @@ services:
             - .:/ecommerce_data
 ```
 
-![image.png](attachment:image.png)
+![image.png](Images/Picture10.png)
 
 We configure three services, the pgdatabase which will use the image postgres:13 from Docker Hub to create a pgdatabase container, the pgadmin which will use the image dpage/pgadmin4 from Docker Hub to create a pgadmin container and the local_etl_flow which will search for and use our Dockerfile to create a local_etl_flow container. All the containers will run under the same network.
 
@@ -244,7 +245,7 @@ Before running the Docker Compose, firstly remove all the existing images from d
 docker images rmi
 ```
 
-![image.png](attachment:image.png)
+![image.png](Images/Picture11.png)
 
 Then, to run Docker Compose, use the following command:
 
@@ -253,7 +254,7 @@ Then, to run Docker Compose, use the following command:
 docker_compose up -d
 ```
 
-![image.png](attachment:image.png)
+![image.png](Images/Picture12.png)
 
 All 3 containers are running. To check them, we use the following command:
 
@@ -262,7 +263,7 @@ All 3 containers are running. To check them, we use the following command:
 docker ps
 ```
 
-![image.png](attachment:image.png)
+![image.png](Images/Picture13.png)
 
 Next step, we need to enter to our local_etl_flow container to access the directory installed in it and run our etl.py file. To do so:
 
@@ -271,11 +272,11 @@ Next step, we need to enter to our local_etl_flow container to access the direct
 docker exec -it loacl_flow-local_etl_flow-1 bash
 ```
 
-![image.png](attachment:image.png)
+![image.png](Images/Picture14.png)
 
 After the script is finished running, we visit again the pgadmin in localhost port 80 and register our postgres database in host pgdatabase. The database should exist and include a table “ecommerce_data_all” filled with our data.
 
-![image-2.png](attachment:image-2.png)
+![image-2.png](Images/Picture15.png)
 
 Use the following command to close all the running containers:
 
@@ -284,7 +285,7 @@ Use the following command to close all the running containers:
 docker compose down
 ```
 
-![image.png](attachment:image.png)
+![image.png](Images/Picture16.png)
 
 ### Conclusion
 
