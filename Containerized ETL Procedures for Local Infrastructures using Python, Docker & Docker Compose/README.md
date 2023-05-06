@@ -40,6 +40,7 @@ ETL is a process that involves extracting data from various sources, transformin
 ### Tech Stack
 
 Local OS: Ubuntu
+
 Tools: Python, Docker, Docker Compose, PostgreSQL
 
 ### Anaconda Installation
