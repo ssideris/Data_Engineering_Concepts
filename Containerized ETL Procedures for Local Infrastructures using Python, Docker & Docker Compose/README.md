@@ -45,6 +45,8 @@ Tools: Python, Docker, Docker Compose, PostgreSQL
 
 ### Anaconda Installation
 
+* Avoid this step in case you have python already installed localy. I am working on a [virtual machine environment](https://github.com/ssideris/Data_Engineering_Concepts/tree/main/Virtual%20Machine%20Instance%20Creation%20using%20Google%20Cloud.pdf) and so I need to get it installed.
+
 We install Anaconda as it includes Python 3.9 which we need to run in Terminal.
 Visit the [link](https://www.anaconda.com/download) and choose the installer that fits your OS. I choose the Linux Installer.
 
