@@ -163,7 +163,7 @@ As a result, our database should be loaded with our transformed data. To test it
 
 ![image.png](Images/Picture5.png)
 
-We create a Docker image called “ecommerce_data_local_flow”, to use it as a blueprint on creating the container that will run the etl.py and constants.py .
+We create a Docker image called “ecommerce_data_local_flow”, to use it as a blueprint on creating the container that will run the etl.py and constants.py . For more information about Docker refer [here](https://github.com/ssideris/Data_Engineering_Concepts/tree/main/Deployment%20of%20Local%20Containerized%20Relational%20Database%20using%20PostgreSQL%20%26%20Docker).
 
 In order to apply our flow to the containerized network, we visit our local_flow directory and create a Dockerfile. In the Dockerfile we set what we want our image to include, which is to install the libraries needed in the python scripts, the python scripts and the data to be used.
 
