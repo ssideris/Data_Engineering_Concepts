@@ -30,7 +30,7 @@ display(HTML('<div style="display: flex;"> \
 
 ### Introduction
 
-In this tutorial, I will guide you through the process of creating a PostgreSQL ([What is PostgreSQL?](https://kinsta.com/knowledgebase/what-is-postgresql/)) container using Docker ([and what is Docker?](https://www.docker.com)). We will cover the basics of containerization, including setting up Docker and creating a container. We will then explore the essential components of PostgreSQL, such as creating databases, tables, and users, and how to manage them using a graphical user interface. Finally, we will deploy a container that will run PostgreSQL 
+In this tutorial, I will guide you through the process of creating a PostgreSQL ([What is PostgreSQL?](https://kinsta.com/knowledgebase/what-is-postgresql/)) container using Docker ([and what is Docker?](https://www.docker.com)). We will cover the basics of containerization, including setting up Docker and creating a container. We will then explore the essential components of PostgreSQL, such as creating databases, tables, and users, and how to manage them using a graphical user interface. Finally, we will deploy a Docker Container that will run PostgreSQL. 
 
 ### Docker and Docker Compose Installation
 
