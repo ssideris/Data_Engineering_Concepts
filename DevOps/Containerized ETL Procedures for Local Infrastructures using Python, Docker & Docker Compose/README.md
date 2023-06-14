@@ -159,7 +159,7 @@ if __name__ == '__main__':
 
 ```
 
-As a result, our database should be loaded with our transformed data. To test it, we run a Select statement in postgres using pgadmin. For pgadmin configuration refer [here](https://github.com/ssideris/Data_Engineering_Concepts/tree/main/Deployment%20of%20Local%20Containerized%20Relational%20Database%20using%20PostgreSQL%20%26%20Docker).
+As a result, our database should be loaded with our transformed data. To test it, we run a Select statement in postgres using pgadmin. For pgadmin configuration refer [here](https://github.com/ssideris/Data_Management_Concepts/tree/main/DevOps/Deployment%20of%20Local%20Containerized%20Relational%20Database%20using%20PostgreSQL%20%26%20Docker).
 
 ![image.png](Images/Picture5.png)
 
