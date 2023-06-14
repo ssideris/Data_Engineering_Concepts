@@ -76,7 +76,7 @@ conda --version
 
 ### Docker and Docker Compose Installations
 
-Please refer to [this tutorial](https://github.com/ssideris/Data_Engineering_Concepts/tree/main/Deployment%20of%20Local%20Containerized%20Relational%20Database%20using%20PostgreSQL%20%26%20Docker) for the installations.
+Please refer to [this tutorial](https://github.com/ssideris/Data_Management_Concepts/tree/main/DevOps/Deployment%20of%20Local%20Containerized%20Relational%20Database%20using%20PostgreSQL%20%26%20Docker) for the installations.
 
 ###  Conainerized ETL Procedures for Local Infrastructures using Python, Docker and Docker Compose
 
