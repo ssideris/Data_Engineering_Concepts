@@ -107,7 +107,7 @@ data_path = "ecommerce-events-history-in-cosmetics-shop/"
 
 ```
 
-Moreover, we procceed by creating a etl.py file which we will use to perform the ETL procedures. The file performs very basic transformation on the data and loads them at the PostgreSQL Database inside the Docker. To create a Docker container that hosts PostgreSQL Database refer [here](https://github.com/ssideris/Data_Engineering_Concepts/tree/main/Deployment%20of%20Local%20Containerized%20Relational%20Database%20using%20PostgreSQL%20%26%20Docker).
+Moreover, we procceed by creating a etl.py file which we will use to perform the ETL procedures. The file performs very basic transformation on the data and loads them at the PostgreSQL Database inside the Docker. To create a Docker container that hosts PostgreSQL Database refer [here](https://github.com/ssideris/Data_Management_Concepts/tree/main/DevOps/Deployment%20of%20Local%20Containerized%20Relational%20Database%20using%20PostgreSQL%20%26%20Docker).
 
 
 ```python
