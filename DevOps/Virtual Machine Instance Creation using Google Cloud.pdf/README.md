@@ -42,7 +42,7 @@ By the end of this tutorial, you will have the necessary skills to set up your o
 
 • Local OS: Windows 11
 
-• VM Instance OS: Ubuntu 
+• VM Instance OS: Linux/Ubuntu 
 
 ### VM Instance Installation using Google Cloud
 
