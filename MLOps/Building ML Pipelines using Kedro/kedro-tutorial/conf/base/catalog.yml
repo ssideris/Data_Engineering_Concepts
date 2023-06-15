@@ -1,0 +1,21 @@
+# Here you can define all your data sets by using simple YAML syntax.
+#
+# Documentation for this file format can be found in "The Data Catalog"
+# Link: https://docs.kedro.org/en/stable/data/data_catalog.html
+
+data:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/data.csv
+
+cleaned_data:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/cleaned_data.csv
+
+model_input_table:
+  type: pandas.CSVDataSet
+  filepath: data/03_primary/processed_data.csv
+
+regressor:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/regressor.pickle
+  versioned: true
