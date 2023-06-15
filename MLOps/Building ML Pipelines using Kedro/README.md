@@ -49,7 +49,7 @@ display(HTML('<div style="display: flex;"> \
 
 In the realm of machine learning, the ability to efficiently develop, deploy, and maintain robust pipelines is crucial for successful data-driven projects. However, the complexity of managing data, models, and dependencies often poses significant challenges for data scientists and engineers. Enter Kedro, a powerful open-source framework that streamlines the development of reproducible, scalable, and maintainable end-to-end machine learning pipelines. For more info refer here: [kedro.org](https://kedro.org)
 
-If you're ready to enhance your machine learning workflows, join us as we dive into the world of Kedro. By the end of this article, you'll have the knowledge and confidence to build ML pipelines that are robust, maintainable, and optimized for success.
+By the end of this article, you'll have the knowledge and confidence to build ML pipelines that are robust, maintainable, and optimized for better collaboration and results.
 
 ### Virtual Environment Deployment
 
