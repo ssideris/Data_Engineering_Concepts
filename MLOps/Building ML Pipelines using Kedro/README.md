@@ -480,9 +480,9 @@ def create_pipeline(**kwargs) -> Pipeline:
 ![image.png](Images/Picture26.png)
 
 
-```python
+
 Finally, we initialize the pipeline creation.
-```
+
 
 
 ```python
@@ -584,9 +584,9 @@ kedro docker run --image house_pricing
 ```
 
 
-```python
+
 To visualize the project inside the container run the following commands:
-```
+
 
 
 ```python
