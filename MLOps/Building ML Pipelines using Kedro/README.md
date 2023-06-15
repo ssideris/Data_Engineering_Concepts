@@ -610,4 +610,4 @@ Your project is ready to be used by anyone with access to the docker container!
 
 By following this tutorial, you have gained a solid understanding of the benefits of using Kedro, such as its modular and scalable approach, which promotes code reusability and collaboration. You have learned how to set up a Kedro project, define data pipelines, and leverage Kedro's extensive functionality for data engineering, model training, and evaluation as well as how to containerize the project and deploy it in production.
 
-As you continue your journey with Kedro, I encourage you to explore its vast ecosystem and discover additional features and plugins that can further enhance your pipeline development experience. I will try and keep the repo up to date by updating it with new kedro methods and best practises.
+As you continue your journey with Kedro, I encourage you to explore its vast ecosystem and discover additional features and plugins that can further enhance your pipeline development experience. I will try and keep the repo up to date by updating it with new kedro methods and best practices.
