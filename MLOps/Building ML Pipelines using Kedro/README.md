@@ -57,7 +57,7 @@ To do so, we first need to install Anaconda. For the installation refer [here](h
 
 Before starting with the deployment of the VE I would like to present a little tip. In case your path to the project is very long, you could use the following method to minize it and display only the name of the last folder in the path. Firstly, use the command $profile and then open the file that was provided using Visual Studio Code or any other source code editor. 
 
-![image.png](attachment:Images/Picture1.png)
+![image.png](Images/Picture1.png)
 
 Inside the file add the following script. The code you added to your PowerShell profile (profile.ps1) modifies the prompt function. It changes the default prompt format to include the current VE and directory (folder) you are in.
 
@@ -75,11 +75,11 @@ function prompt {
 }
 ```
 
-![image.png](attachment:Images/Picture2.png)
+![image.png](Images/Picture2.png)
 
 The result is presented below:
 
-![image.png](attachment:Images/Picture3.png)
+![image.png](Images/Picture3.png)
 
 For the creation of the VE, we will use conda. To cerate the environment and set its name and the python version we want it to support, we run:
 
@@ -95,7 +95,7 @@ To check if the VE has been created, we run:
 conda info --envs 
 ```
 
-![image.png](attachment:Images/Picture3.png)
+![image.png](Images/Picture3.png)
 
 We proceed to activate the VE. The name of the VE should be presented at the start of the terminal line.
 
@@ -104,7 +104,7 @@ We proceed to activate the VE. The name of the VE should be presented at the sta
 conda activate kedro-tutorial
 ```
 
-![image.png](attachment:Images/Picture4.png)
+![image.png](Images/Picture4.png)
 
 The instance is running!
 
@@ -116,7 +116,7 @@ pip install kedro
 
 kedro -V
 
-![image.png](attachment:Images/Picture5.png)
+![image.png](Images/Picture5.png)
 
 We proceed by creating a new kedro project naming it "kedro-tutorial".
 
@@ -127,7 +127,7 @@ kedro new
 
 We observe that a new folder "kedro-tutorial" is created in our parent directory, where other folders are included. They are the default folders for configuring a kedro project and we will analyze their use on the next steps.
 
-![image.png](attachment:Images/Picture6.png)
+![image.png](Images/Picture6.png)
 
 Finally, let's initiallize git for version controlling of our project. We enter the kedro project's directory and run the "git init" command.
 
@@ -162,9 +162,9 @@ git commit -m "Initial commit"
 git push -u origin main
 ```
 
-![image.png](attachment:Images/Picture7.png)
+![image.png](Images/Picture7.png)
 
-![image.png](attachment:Images/Picture8.png)
+![image.png](Images/Picture8.png)
 
 Our project is ready to start!
 
@@ -172,7 +172,7 @@ Our project is ready to start!
 
 We will use a number of different libraries during the project. In order to install them, we will use a requirements.txt file where we will include the names and versions of the libraries we need to install. Kedro has already produced such a file in the src directory including all the basic dependencies needed to run a kedro project. 
 
-![image.png](attachment:Images/Picture9.png)
+![image.png](Images/Picture9.png)
 
 In order to install they dependencied we run the following command:
 
@@ -194,7 +194,7 @@ houses:
   filepath: data/01_raw/data.csv
 ```
 
-![image.png](attachment:Images/Picture10.png)
+![image.png](Images/Picture10.png)
 
 The catalog.yml will be responsible to configure all the inputs/outputs of our pipeline and make them available for analysis minimizing the size of the commands needed to call them and leading to clearer code. 
 
@@ -207,7 +207,7 @@ kedro ipython
 catalog.load("houses").head(10)
 ```
 
-![image.png](attachment:Images/Picture11.png)
+![image.png](Images/Picture11.png)
 
 To exit ipython type "exit".
 
@@ -222,9 +222,9 @@ kedro jupyter notebook
 
 You should be redirected to the Jupyter Notebook page. Enter the notebooks directory and create a new kedro notebook there. Save and name it, i called it "EDA.ipynb".
 
-![image.png](attachment:Images/Picture12.png)
+![image.png](Images/Picture12.png)
 
-![image.png](attachment:Images/Picture13.png)
+![image.png](Images/Picture13.png)
 
 There we will run the explonatory data analysis. For the code refer in the folder notebooks. In this tutorial, we will not pay attention to the cleaning performed to our dataset as the main purpose is to show how kedro can operate as a main storage and orchestrational point for all data science teams to work on. One point to mention is that all the diagrams produced and saved in the Jupyter Notebook can be stored inside the notebooks directory. To access one use the following command: 
 
@@ -233,7 +233,7 @@ There we will run the explonatory data analysis. For the code refer in the folde
 start price_distribution.png
 ```
 
-![image.png](attachment:Images/Picture14.png)
+![image.png](Images/Picture14.png)
 
 ### Data Cleaning Pipeline Creation
 
@@ -244,7 +244,7 @@ We proceed by creating our first pipeline which will be responsible to clean our
 kedro pipeline create data_cleaning  
 ```
 
-![image.png](attachment:Images/Picture15.png)
+![image.png](Images/Picture15.png)
 
 We create a new nodes.py inside the pipelines/data_processing folder. There we create a new node that is cleaning the raw data. Each node has the form of a python function with a defined input and output. Any necessary imports could be performed inside the nodes.py. 
 
@@ -259,7 +259,7 @@ def clean_data(data: pd.DataFrame) -> pd.DataFrame:
     return data_clean
 ```
 
-![image.png](attachment:Images/Picture16.png)
+![image.png](Images/Picture16.png)
 
 Moreover, we open the test_pipeline.py. There we create our pipeline in which we want to include the node we created before.
 
@@ -278,7 +278,7 @@ def create_pipeline(**kwargs) -> Pipeline:
     ), ])
 ```
 
-![image.png](attachment:Images/Picture17.png)
+![image.png](Images/Picture17.png)
 
 Furthemore, we visit the __init__.py in order to initialize the pipeline creation when we run kedro.
 
@@ -291,7 +291,7 @@ __all__ = ["create_pipeline"]
 __version__ = "0.1"
 ```
 
-![image.png](attachment:Images/Picture18.png)
+![image.png](Images/Picture18.png)
 
 As a final step, we configure the clean dataset (output) inside the catalog.yml file in order to make it callable from anywhere inside kedro.
 
@@ -302,7 +302,7 @@ cleaned_data:
   filepath: data/02_intermediate/cleaned_data.csv
 ```
 
-![image.png](attachment:Images/Picture19.png)
+![image.png](Images/Picture19.png)
 
 To run and test our cleaning pipeline we could run the following command:
 
@@ -320,19 +320,19 @@ kedro run --nodes=clean_data
 
 The result is the same as we only have one pipeline running which includes only one node.
 
-![image.png](attachment:Images/Picture20.png)
+![image.png](Images/Picture20.png)
 
 ### Feature Engineering using Jupyter Notebook
 
 As a pre-step, we will create a typical jupyter notebook that will analyze the cleaned dataset and transform data so that they are ready for the ML model, as it is usually happening on a data science project. Moreover, it will train and test models on a variety of methods and evaluate them. We will not proceed on fine tuning the winning model as it is not the purpose of this tutorial. The file named Feature_engineering.ipynb is saved in the notebooks directory.
 
-![image.png](attachment:Images/Picture21.png)
+![image.png](Images/Picture21.png)
 
 ### Data Science Pipeline Creation
 
 On this step, we will create a data science pipeline that will deploy our Feature_engineering notebook into production.
 
-![image.png](attachment:Images/Picture22.png)
+![image.png](Images/Picture22.png)
 
 Firstly, we create a node that does the necessary cleaning and processing on features such as dropping columns or scaling and one-hot-encoding numeric columns. The node is created via the processing function while the other functions work supportively to the node.
 
@@ -402,7 +402,7 @@ model_options:
   random_state: 3
 ```
 
-![image.png](attachment:Images/Picture23.png)
+![image.png](Images/Picture23.png)
 
 Finally, we create two more nodes, one for the training and one for the evaluation of the model.
 
@@ -424,7 +424,7 @@ def evaluate_model(
 
 All the nodes together should look similar to this:
 
-![image.png](attachment:Images/Picture24.png)
+![image.png](Images/Picture24.png)
 
 Let's configure the inputs and outputs of the pipeline so that they are easily accesible via the catalog.yml. With the following configuration we configure the processed data that are used as input to the model to the data/03_primary directory and the trained model "regressor" to the data/06_models directory. We use the "versioned: true" parameter to keep version controlling over the model every time it is running.
 
@@ -440,7 +440,7 @@ regressor:
   versioned: true
 ```
 
-![image.png](attachment:Images/Picture25.png)
+![image.png](Images/Picture25.png)
 
 As of the nodes' sequence, we open the pipeline.py and we add the nodes to the pipeline configuring them to the appropriate function, inputs and outputs as well as a name for the node. Kedro understands the sequence to run the nodes from the inputs and outputs they depend on, so each node will not run until their inputs have been produced and configured in the catalog.yml from another node.
 
@@ -473,7 +473,7 @@ def create_pipeline(**kwargs) -> Pipeline:
     ), ])
 ```
 
-![image.png](attachment:Images/Picture26.png)
+![image.png](Images/Picture26.png)
 
 
 ```python
@@ -489,7 +489,7 @@ __all__ = ["create_pipeline"]
 __version__ = "0.1"
 ```
 
-![image.png](attachment:Images/Picture27.png)
+![image.png](Images/Picture27.png)
 
 Let's run the whole project and see what is produced.
 
@@ -498,11 +498,11 @@ Let's run the whole project and see what is produced.
 kedro run
 ```
 
-![image.png](attachment:Images/Picture28.png)
+![image.png](Images/Picture28.png)
 
 All the nodes run smoothly. The trained model is stored in the data/06_models directory. We run the project one more time and we observe that a version control is kept for the models trained. This way we can easily change the parameters yaml file and rerun our project or train our model on different sizes of datasets without losing count of the models produced.
 
-![image.png](attachment:Images/Picture29.png)
+![image.png](Images/Picture29.png)
 
 Also, we are able to run each pipeline created individually so that we do not have to clean our dataset another time. For example we might want to change some of the model's parameters in the yaml file to create a new version of the model. To run a specific pipeline we use:
 
@@ -511,7 +511,7 @@ Also, we are able to run each pipeline created individually so that we do not ha
 kedro run --pipeline data_science
 ```
 
-![image.png](attachment:Images/Picture30.png)
+![image.png](Images/Picture30.png)
 
 ### Project's Visualization
 
@@ -524,7 +524,7 @@ kedro viz
 
 A new browser window should open where a dendrogram shows the nodes and the sequence of visiting them when we run our project. We can interact with each node getting information about it and the code it includes.
 
-![image.png](attachment:Images/Picture31.png)
+![image.png](Images/Picture31.png)
 
 ### Project Packaging
 
