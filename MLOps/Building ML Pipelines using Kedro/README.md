@@ -1,6 +1,6 @@
 ## Building ML Pipelines using Kedro
 
-
+<!--
 ```python
 from IPython.display import display, HTML
 display(HTML('<div style="display: flex;"> \
@@ -12,7 +12,7 @@ display(HTML('<div style="display: flex;"> \
              </div> \
              </div>'))
 ```
-
+-->
 
 <div style="display: flex;">              <img src="Images/author_pic.jpg" alt="author profile pic" style="width:8%;                      border-radius:100%; border: 1px solid black;"/>              <div style="float: right; margin-left:3%">              <p style=" font-size: 130%; margin-top:10%; ">By Stamatis Sideris</p>              <p style="font-size: 100%;">Updated as of: June 6, 2023</p>              </div>              </div>
 
@@ -33,13 +33,17 @@ display(HTML('<div style="display: flex;"> \
 
 [6. EDA using Jupyter Notebook](#eda-using-jupyter-notebook)
 
-[6. Data Processing Pipeline Creation](#data-processing-pipeline-creation)
+[7. Data Cleaning Pipeline Creation](#data-processing-pipeline-creation)
 
-[7. Data Science Pipeline Creation](#data_science-pipeline-creation)
+[8. Feature Engineering using Jupyter Notebook](#feature-engineering-using-jupyter-notebook)
 
-[8. Project Packaging](#project-packaging)
+[9. Data Science Pipeline Creation](#data-science-pipeline-creation)
 
-[9. Conclusion](#conclusion)
+[10. Project's Visualization](#project's-visualization)
+
+[11. Project's Packaging](#project's-packaging)
+
+[12. Conclusion](#conclusion)
 
 ### Introduction
 
@@ -230,7 +234,7 @@ There we will run the explonatory data analysis. For the code refer in the folde
 
 
 ```python
-start price_distribution.png
+start variables_cor.png
 ```
 
 ![image.png](Images/Picture14.png)
