@@ -75,7 +75,7 @@ docker run hello-world
 
 At this point, we could download and install docker-compose ([link](https://github.com/docker/compose/releases)) that would help us easily manage and configure all the different containers we want to create. In this tutorial, we will not make use of docker-compose in order to emphasize on the Docker structure commands but for a better view of it you could refer here [Containerized ETL Procedures for Local Infrastructures using Python, Docker & Docker Compose](https://github.com/ssideris/Data_Management_Concepts/tree/main/Containerized%20ETL%20Procedures%20for%20Local%20Infrastructures%20using%20Python%2C%20Docker%20%26%20Docker%20Compose#docker-and-docker-compose-installations).  
 
-Firstly, create a bin directory to store your downloads. Then, visit the following link and choose the version of docker-compose you prefer for downloading. We download the docker-compose-linux-x86_64 version as our subsystem works in Ubuntu.
+Firstly, create a bin directory to store your downloads. Then, visit the following [link](https://github.com/docker/compose/releases) and choose the version of docker-compose you prefer for downloading. We download the docker-compose-linux-x86_64 version as our subsystem works in Ubuntu.
 
 
 ```python
