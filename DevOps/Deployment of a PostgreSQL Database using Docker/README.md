@@ -39,6 +39,8 @@ Firstly, we install the docker.io in our VM instance. To do so:
 
 
 ```python
+sudo apt-get update
+
 sudo apt-get install docker.io
 
 docker --version
