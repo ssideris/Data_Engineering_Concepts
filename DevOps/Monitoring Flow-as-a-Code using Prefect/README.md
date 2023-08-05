@@ -1,6 +1,6 @@
 ## Monitoring Flow-as-a-Code using [Prefect](https://www.prefect.io)
 
-
+<!--
 ```python
 from IPython.display import display, HTML
 display(HTML('<div style="display: flex;"> \
@@ -12,7 +12,7 @@ display(HTML('<div style="display: flex;"> \
              </div> \
              </div>'))
 ```
-
+-->
 
 <div style="display: flex;">              <img src="Images/author_pic.jpg" alt="author profile pic" style="width:8%;                      border-radius:100%; border: 1px solid black;"/>              <div style="float: right; margin-left:3%">              <p style=" font-size: 130%; margin-top:10%; ">By Stamatis Sideris</p>              <p style="font-size: 100%;">Updated as of: August 1, 2023</p>              </div>              </div>
 
@@ -267,10 +267,7 @@ http://127.0.0.1:4200/api
 
 The flow should appear in the UI, in the "Flow Runs" tab alongside information and logging about the flow and each of their tasks.
 
-
-```python
 ![image.png](Images/Picture2.png)
-```
 
 ### Monitoring a Containerized Flow
 
@@ -377,14 +374,7 @@ docker-compose up
 
 The containers should start running alongside our etl flow. The loaded data can be accessed using the pgadmin UI.
 
-
-```python
-![image.png](Images/Picture1.png)
-```
-
-    '[image.png]' is not recognized as an internal or external command,
-    operable program or batch file.
-    
+![image.png](Images/Picture1.png)    
 
 The Flow can be examined via Prefect using the following link:
 
@@ -393,10 +383,8 @@ The Flow can be examined via Prefect using the following link:
 http://0.0.0.0:4200/api
 ```
 
-
-```python
 ![image.png](Images/Picture3.png)
-```
+
 
 ### Conclusion
 
