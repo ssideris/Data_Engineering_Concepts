@@ -2,7 +2,7 @@
 
 Introducing processes, tools, and methodologies to balance needs throughout the software development life cycle, from coding and deployment, to maintenance and updates.
 
-A suggested sequence of reading the tutorials is the following:
+A suggested sequence of studying the tutorials is the following:
 
 - [Virtual Machine Instance Creation using Google Cloud](https://github.com/ssideris/Data_Management_Concepts/tree/main/DevOps/Virtual%20Machine%20Instance%20Creation%20using%20Google%20Cloud.pdf)
 - [Deployment of a PostgreSQL Database using Docker](https://github.com/ssideris/Data_Management_Concepts/tree/main/DevOps/Deployment%20of%20a%20PostgreSQL%20Database%20using%20Docker)
