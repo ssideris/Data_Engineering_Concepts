@@ -1,4 +1,4 @@
-## Monitoring Flow-as-a-Code using [Prefect](https://www.prefect.io)
+## Monitoring a Flow-as-a-Code using [Prefect](https://www.prefect.io)
 
 <!--
 ```python
