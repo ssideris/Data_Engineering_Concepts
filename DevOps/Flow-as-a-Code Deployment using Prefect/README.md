@@ -1071,8 +1071,3 @@ When the schedule time has arrived, the work pool pulls the flow from the Github
 ### Conclusion
 
 In essence, this tutorial has empowered you to complete deployments of Prefect workflows. From scheduling using cronjobs, parameterization, encapsulation using Docker to version controlling via GitHub, the tutorial is analytically presenting all the steps in order to reach the desired results.
-
-
-```python
-
-```
