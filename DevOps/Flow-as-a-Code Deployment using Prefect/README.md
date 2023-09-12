@@ -1,6 +1,6 @@
 ## Flow-as-a-Code [Deployment](https://docs.prefect.io/2.11.3/concepts/deployments/) using Prefect
 
-
+<!--
 ```python
 from IPython.display import display, HTML
 display(HTML('<div style="display: flex;"> \
@@ -12,7 +12,7 @@ display(HTML('<div style="display: flex;"> \
              </div> \
              </div>'))
 ```
-
+-->
 
 <div style="display: flex;">              <img src="Images/author_pic.jpg" alt="author profile pic" style="width:8%;                      border-radius:100%; border: 1px solid black;"/>              <div style="float: right; margin-left:3%">              <p style=" font-size: 130%; margin-top:10%; ">By Stamatis Sideris</p>              <p style="font-size: 100%;">Updated as of: August 6, 2023</p>              </div>              </div>
 
