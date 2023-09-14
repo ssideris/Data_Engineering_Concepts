@@ -565,7 +565,7 @@ To start the deployment using the yaml file, use:
 prefect deploy
 ```
 
-An interactive prompt will guide you with the configuration of the deployment asking you for the name of the deployment, what flow.py to be used as entrypoint, if you want to schedule the deployment and some configuration questions about the Docker image we will discuss next. After all, Prefect will start building the image.  
+An interactive prompt will guide you with the configuration of the deployment asking you for the name of the deployment, what flow.py to be used as entrypoint, if you want to schedule the deployment and some configuration questions about the Docker image we will discuss next. All set, Prefect will start building the image.  
 
 Before starting the deployment, some more steps could be taken:
 
