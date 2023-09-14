@@ -46,7 +46,7 @@ In this tutorial, we will deploy a Prefect workflow and manage it using the CLI 
 ### Prerequisites
 As always, I am going to start by using a VM instance provided by Google, as proposed [here](https://github.com/ssideris/Data_Management_Concepts/tree/main/DevOps/Virtual%20Machine%20Instance%20Creation%20using%20Google%20Cloud.pdf). This is a very helpful step to deal with the low specs of your computer but also, it is optional.
 
-Moreover, make sure to deploy a Virtual Environment with all the needed dependencies. I use Anaconda to create one. Inside the VE, we pip install Prefect:
+Moreover, make sure to deploy a Virtual Environment with all the needed dependencies. I use [Anaconda](https://www.anaconda.com/download) to create one. Inside the VE, we pip install Prefect:
 
 
 ```python
