@@ -569,7 +569,7 @@ An interactive prompt will guide you with the configuration of the deployment as
 
 Before starting the deployment, some more steps could be taken:
 
-Prefect is giving the ability to push the created image to more places than our local repository. We will use Docker Hub's online repository to store the created image and make it accessible to eveyrone with authorization rights. 
+Prefect is giving the ability to push the created image to more places than our local repository. We will use Docker Hub's online repository to store the created image and make it accessible to anyone with authorization rights. 
 
 Docker Hub is a cloud based platform offered by Docker where you can store privately or share publicly your images or pull other public images. We can easily create a repo by signing up and visiting the Repositories Tab. There we set a name for our repo and moderate its visibility settings. A free account is allowed to have only one repo. In my case, i created a repo called "etl" under the username "stamatissideris".
 
