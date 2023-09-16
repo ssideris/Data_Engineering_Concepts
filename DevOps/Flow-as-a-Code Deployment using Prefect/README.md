@@ -483,11 +483,18 @@ The containerization of a workflow has been described analytically [here](https:
 
 Let's now see how to containerize a deployment and create a network so that we can upload our transformed data to a postgres db container. To do so, we need to create a completely new deployment configured by a new prefect.yaml in the flow_2 directory.
 
-To start, let's create a work-pool connected to a worker that will be responsible to pull a docker image and run our deployment. To do so:
+To start, lets use the docker-compose file suggested [here](https://github.com/ssideris/Data_Management_Concepts/tree/main/DevOps/Monitoring%20Flow-as-a-Code%20using%20Prefect) in order to build a docker network with two running images, one of a postgres db and one of a prefect's server. To do so:
+
+```python
+docker-compose up -d
+```
+
+Then, let's create a work-pool connected to a worker that will be responsible to pull a docker image and run our deployment. To do so:
 
 
 ```python
 prefect work-pool create --type docker docker-etl
+prefect worker start --pool 'docker-etl'
 ```
 
 Next, create a custom made Dockerfile that will include our flow and the requirements needed for it to run. The Dockerfile will be used to create the image of our deployment.
@@ -501,7 +508,7 @@ ADD . /opt/prefect/flows/flow_2
 RUN pip install -r /opt/prefect/flows/flow_2/requirements.txt --trusted-host pypi.python.org --no-cache-dir
 ```
 
-Then, use the following command to initialize a deployment that will run inside a Docker container.
+Then, use the following command to initialize a deployment that will run inside a Docker container. The building image will be based on the Dockerfile we created before.
 
 
 ```python
@@ -567,7 +574,7 @@ prefect deploy
 
 An interactive prompt will guide you with the configuration of the deployment asking you for the name of the deployment, what flow.py to be used as entrypoint, if you want to schedule the deployment and some configuration questions about the Docker image we will discuss next. All set, Prefect will start building the image.  
 
-Before starting the deployment, some more steps could be taken:
+Before starting the deployment, let's do some more steps:
 
 Prefect is giving the ability to push the created image to more places than our local repository. We will use Docker Hub's online repository to store the created image and make it accessible to anyone with authorization rights. 
 
@@ -830,6 +837,14 @@ deployments:
       directory: /opt/prefect/flows/flow_2
 
 ```
+
+
+Finally, we run our deployment:
+
+```python
+prefect deployment run 'Main Flow/etl-deployment-2'
+```
+After the run has been completed, we visit postgres and inspect the table where our data have been uploaded. The deployment was a success!
 
 ### Git Cloning the Deployment for Version Controlling
 
