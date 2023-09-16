@@ -483,7 +483,7 @@ The containerization of a workflow has been described analytically [here](https:
 
 Let's now see how to containerize a deployment and create a network so that we can upload our transformed data to a postgres db container. To do so, we need to create a completely new deployment configured by a new prefect.yaml in the flow_2 directory.
 
-To start, let's create a worker that will be responsible to pull a docker image and run our deployment. To do so:
+To start, let's create a work-pool connected to a worker that will be responsible to pull a docker image and run our deployment. To do so:
 
 
 ```python
