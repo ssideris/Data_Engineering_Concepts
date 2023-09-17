@@ -43,7 +43,7 @@ Once your data is securely stored in Google Cloud Storage, we will dive into the
 
 As always, I am going to start by using a VM instance provided by Google, as proposed [here](https://github.com/ssideris/Data_Management_Concepts/tree/main/DevOps/Virtual%20Machine%20Instance%20Creation%20using%20Google%20Cloud.pdf). This is a very helpful step to deal with the low specs of your computer but remains optional.
 
-Moreover, make sure to deploy a Virtual Environment with all the needed dependencies. I use Anaconda to create one. Inside the VE, we pip install :the dependencies that are needed for this tutorial using a requirements.txt.
+Moreover, make sure to deploy a Virtual Environment with all the needed dependencies. I use Anaconda to create one. Inside the VE, we pip install the dependencies that are needed for this tutorial using a requirements.txt.
 
 
 ```python
@@ -264,10 +264,17 @@ SELECT * FROM e-commerce-shipping-392016.ecommerce_data.ecommerce_data_all;
 
 We observe again, that the amount of data that is processed is very small.
 
+```python
+SELECT product_id, AVG(price) AS Average_Price
+FROM 'e-commerce-shipping-392016.ecommerce_data.ecommerce_data_all_partitioned_clustered'
+WHERE date = '2019-11-01' and product_id = 5676290
+GROUP BY product_id;
+```
+
 ![image.png](Images/Picture13.png)
 
 By effectively using Partitioning and Clustering we can increase the efficiency of our queries, making them faster and cost-effective.
 
 ### Conclusion
 
-Throughout this tutorial, we've demonstrated how to set up GCS and BigQuery, how to seamlessly transfer data between them, and how to perform powerful analytics and querying tasks with BigQuery. We've also covered best practices and tips to optimize your workflow, ensuring efficient data management and analysis. In future tutorials, we will explore BigQuery more, taking advantage of its Analytics and ML Pipeline abilities.
+Throughout this tutorial, we've demonstrated how to set up GCS and BigQuery, how to seamlessly transfer data between them, and how to perform querying tasks with BigQuery. We've also covered best practices and tips to optimize your workflow, ensuring efficient data management and analysis. In future tutorials, we will explore BigQuery more, taking advantage of its Analytics and ML Pipeline capabilities.
