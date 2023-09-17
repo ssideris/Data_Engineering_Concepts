@@ -1,6 +1,6 @@
 ## Flow-as-a-Code [Deployment](https://docs.prefect.io/2.11.3/concepts/deployments/) using Prefect
 
-
+<!--
 ```python
 from IPython.display import display, HTML
 display(HTML('<div style="display: flex;"> \
@@ -12,7 +12,7 @@ display(HTML('<div style="display: flex;"> \
              </div> \
              </div>'))
 ```
-
+-->
 
 <div style="display: flex;">              <img src="Images/author_pic.jpg" alt="author profile pic" style="width:8%;                      border-radius:100%; border: 1px solid black;"/>              <div style="float: right; margin-left:3%">              <p style=" font-size: 130%; margin-top:10%; ">By Stamatis Sideris</p>              <p style="font-size: 100%;">Updated as of: August 6, 2023</p>              </div>              </div>
 
@@ -46,7 +46,7 @@ In this tutorial, we will deploy a Prefect workflow and manage it using the CLI 
 ### Prerequisites
 As always, I am going to start by using a VM instance provided by Google, as proposed [here](https://github.com/ssideris/Data_Management_Concepts/tree/main/DevOps/Virtual%20Machine%20Instance%20Creation%20using%20Google%20Cloud.pdf). This is a very helpful step to deal with the low specs of your computer but also, it is optional.
 
-Moreover, make sure to deploy a Virtual Environment with all the needed dependencies. I use Anaconda to create one. Inside the VE, we pip install Prefect:
+Moreover, make sure to deploy a Virtual Environment with all the needed dependencies. I use [Anaconda](https://www.anaconda.com/download) to create one. Inside the VE, we pip install Prefect:
 
 
 ```python
@@ -147,9 +147,8 @@ prefect init
 The command will start an interactive prompt which will ask us for our preferred deployment. This time we will choose the local deployment, which is the simplest one and derives the flow from our local file storage system.
 
 
-```python
+
 ![image.png](Images/Picture1.png) 
-```
 
 Three files are created inside the flows directory. The .prefectignore is for avoiding pushing sensitive prefect data to the git repo. The .prefect directory works as a directory for mounting prefect's metadata. Finally, the most important file, prefect.yaml is a configuration file for our flow. 
 
@@ -301,16 +300,16 @@ prefect server start
 Visiting the "Flows" tab, we can see the flow "Main Flow" as described in the etl.py. The flow says that has been deployed. In order to see the Deployment, we visit the Deployments tab, where we can see that our newly established deployment is stored there including our Main Flow as described in tab "Flows". 
 
 
-```python
+
 ![image.png](Images/Picture2.png)
-```
+
 
 Three Flow runs have been scheduled to run at 2am for the next three days. Each running is associated with the work pool "etl" we created before. If we visit the "Work Pools" tab, we can see the "etl-local" work pool stored there, including three scheduled works and a worker to execute them on time.
 
 
-```python
+
 ![image.png](Images/Picture3.png)
-```
+
 
 After finishing with the deployment, to execute flow runs from this deployment, start a worker in a separate terminal that pulls work from the 'etl' work pool:
 
@@ -320,9 +319,9 @@ prefect worker start --pool 'etl'
 ```
 
 
-```python
+
 ![image.png](Images/Picture4.png)
-```
+
 
 The worker will start running the scheduled workflows when their time has arrived. Then to start running the deployment immediately, use the following command:
 
@@ -334,9 +333,9 @@ prefect deployment run 'Main Flow/etl-deployment-1'
 As a result, a workflow is deployed inside the "etl-local" work-pool and the responsible worker will start running it.
 
 
-```python
+
 ![image.png](Images/Picture5.png)
-```
+
 
 ### Parameterizing the Flow
 
@@ -474,9 +473,9 @@ deployments:
 Next time we will start this deployment, the parameters "table_name", "csv_name", "data_path" and "data_url" should change based on the values in the prefect.yaml while the rest sensitive parameters "user", "password", "host","port" and "db" will take values based on the .env file.
 
 
-```python
+
 ![image.png](Images/Picture6.png)
-```
+
 
 ### Containerizing the Deployment for Running using Docker
 
@@ -484,11 +483,18 @@ The containerization of a workflow has been described analytically [here](https:
 
 Let's now see how to containerize a deployment and create a network so that we can upload our transformed data to a postgres db container. To do so, we need to create a completely new deployment configured by a new prefect.yaml in the flow_2 directory.
 
-To start, let's create a worker that will be responsible to pull a docker image and run our deployment. To do so:
+To start, lets use the docker-compose file suggested [here](https://github.com/ssideris/Data_Management_Concepts/tree/main/DevOps/Monitoring%20Flow-as-a-Code%20using%20Prefect) in order to build a docker network with two running images, one of a postgres db and one of a prefect's server. To do so:
+
+```python
+docker-compose up -d
+```
+
+Then, let's create a work-pool connected to a worker that will be responsible to pull a docker image and run our deployment. To do so:
 
 
 ```python
 prefect work-pool create --type docker docker-etl
+prefect worker start --pool 'docker-etl'
 ```
 
 Next, create a custom made Dockerfile that will include our flow and the requirements needed for it to run. The Dockerfile will be used to create the image of our deployment.
@@ -502,7 +508,7 @@ ADD . /opt/prefect/flows/flow_2
 RUN pip install -r /opt/prefect/flows/flow_2/requirements.txt --trusted-host pypi.python.org --no-cache-dir
 ```
 
-Then, use the following command to initialize a deployment that will run inside a Docker container.
+Then, use the following command to initialize a deployment that will run inside a Docker container. The building image will be based on the Dockerfile we created before.
 
 
 ```python
@@ -566,18 +572,18 @@ To start the deployment using the yaml file, use:
 prefect deploy
 ```
 
-An interactive prompt will guide you with the configuration of the deployment asking you for the name of the deployment, what flow.py to be used as entrypoint, if you want to schedule the deployment and some configuration questions about the Docker image we will discuss next. After all, Prefect will start building the image.  
+An interactive prompt will guide you with the configuration of the deployment asking you for the name of the deployment, what flow.py to be used as entrypoint, if you want to schedule the deployment and some configuration questions about the Docker image we will discuss next. All set, Prefect will start building the image.  
 
-Before starting the deployment, some more steps could be taken:
+Before starting the deployment, let's do some more steps:
 
-Prefect is giving the ability to push the created image to more places than our local repository. We will use Docker Hub's online repository to store the created image and make it accessible to eveyrone with authorization rights. 
+Prefect is giving the ability to push the created image to more places than our local repository. We will use Docker Hub's online repository to store the created image and make it accessible to anyone with authorization rights. 
 
 Docker Hub is a cloud based platform offered by Docker where you can store privately or share publicly your images or pull other public images. We can easily create a repo by signing up and visiting the Repositories Tab. There we set a name for our repo and moderate its visibility settings. A free account is allowed to have only one repo. In my case, i created a repo called "etl" under the username "stamatissideris".
 
 
-```python
+
 ![image.png](Images/Picture7.png)
-```
+
 
 After creating the repo, we are ready to use another Prefect's functionality, the [Blocks](https://docs.prefect.io/2.11.3/concepts/blocks/). Blocks are a primitive within Prefect that enables the storage of configuration and provides an interface for interacting with external systems. With blocks, you can securely store credentials for authenticating with services like AWS, GitHub, Slack, and any other system you'd like to orchestrate with Prefect.
 
@@ -704,23 +710,23 @@ Prefect will start building the docker image you specified in the configuration 
 As we can see using Docker Desktop, the image has been created locally:
 
 
-```python
+
 ![image.png](Images/Picture8.png)
-```
+
 
 And has been pushed at the Docker Hub:
 
 
-```python
+
 ![image.png](Images/Picture9.png)
-```
+
 
 Finally, we visit the Prefect UI where we can see our new development running:
 
 
-```python
+
 ![image.png](Images/Picture10.png)
-```
+
 
 In case you do not want to configure yaml files for deployment, prefect makes it easy for you by providing you with an interactive prompt to build the deployment. Just change the values in each property to null and use the "prefect deploy" command. Prefect will recognise the empty yaml configuration file and will complete it by asking you questions. An example of an empty yaml file:
 
@@ -831,6 +837,14 @@ deployments:
       directory: /opt/prefect/flows/flow_2
 
 ```
+
+
+Finally, we run our deployment:
+
+```python
+prefect deployment run 'Main Flow/etl-deployment-2'
+```
+After the run has been completed, we visit postgres and inspect the table where our data have been uploaded. The deployment was a success!
 
 ### Git Cloning the Deployment for Version Controlling
 
@@ -1056,24 +1070,19 @@ deployments:
 The deployment is also observed in the UI:
 
 
-```python
+
 ![image.png](Images/Picture11.png)
-```
+
 
 The image is pushed at the Docker Hub:
 
 
-```python
+
 ![image.png](Images/Picture12.png)
-```
+
 
 When the schedule time has arrived, the work pool pulls the flow from the Github Repo and creates an Image of it based on our custom Dockerfile. Then, it runs the updated image (and so our flow) and pushes it to the Docker Hub making it available for other users with authorization rights.
 
 ### Conclusion
 
-In essence, this tutorial has empowered you to complete deployments of Prefect workflows. From scheduling using cronjobs, parameterization, encapsulation using Docker to version controlling via GitHub, the tutorial is analytically presenting all the steps in order to reach the desired results.
-
-
-```python
-
-```
+In essence, this tutorial has empowered you to complete deployments of Prefect workflows. From scheduling and parameterization using workpools to encapsulation and version controlling using Docker and GitHub, this tutorial is analytically presenting all the steps needed in order to reach the desired results.
