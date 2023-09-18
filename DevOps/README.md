@@ -9,3 +9,4 @@ A suggested structure of studying the tutorials:
 - [Containerizing Python Scripts and Developing a Containers Network using Docker & Docker Compose](https://github.com/ssideris/Data_Management_Concepts/tree/main/DevOps/Containerizing%20Python%20Scripts%20and%20Developing%20a%20Containers%20Network%20using%20Docker%20%26%20Docker%20Compose)
 - [Monitoring a Flow-as-a-Code using Prefect](https://github.com/ssideris/Data_Management_Concepts/tree/main/DevOps/Monitoring%20Flow-as-a-Code%20using%20Prefect)
 - [Flow-as-a-Code Deployment using Prefect](https://github.com/ssideris/Data_Management_Concepts/tree/main/DevOps/Flow-as-a-Code%20Deployment%20using%20Prefect)
+- [Uploading Data on Google Cloud Storage and Querying them Using BigQuery](https://github.com/ssideris/Data_Management_Concepts/tree/main/DevOps/Uploading%20Data%20in%20Google%20Cloud%20Storage%20and%20Querying%20them%20using%20Big%20Query)
