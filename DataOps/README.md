@@ -37,6 +37,6 @@ The scope of this tutorial is to harness the power of Google Cloud by loading Da
 ### Analytics Engineering using dbt
 
 The scope of this tutorial is to explaing the concept of Analytics Engineering and how it boosts the collaboration between data engineers and data analysts. The tool to be used is dbt.
-[Analytics Engineering using dbt](https://github.com/ssideris/Data_Management_and_Analytics_Operations/edit/main/DataOps/README.md)
+[Analytics Engineering using dbt](https://github.com/ssideris/Data_Management_and_Analytics_Operations/blob/main/DataOps/Analytics%20Engineering%20using%20dbt/README.md)
 
 ### Batch Processing using PySpark (UNDER CONSTRUCTION)
