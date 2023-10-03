@@ -7,7 +7,7 @@ A suggested structure of studying the tutorials:
 ### Setting up a Virtual Machine in Google Cloud
 
 The scope of this tutorial is to enhance the specifications of our working environment easily by using a VM provided by Google Cloud.
-[Virtual Machine Instance Creation using Google Cloud](https://github.com/ssideris/Data_Management_Concepts/tree/main/DevOps/Virtual%20Machine%20Instance%20Creation%20using%20Google%20Cloud.pdf)
+[Virtual Machine Instance Creation using Google Cloud](https://github.com/ssideris/Data_Management_Concepts/tree/main/DataOps/Virtual%20Machine%20Instance%20Creation%20using%20Google%20Cloud.pdf)
 
 ### Setting up a Postgres Database using Docker in minutes
 
