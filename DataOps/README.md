@@ -7,27 +7,27 @@ A suggested structure of studying the tutorials:
 ### Setting up a Virtual Machine in Google Cloud
 
 The scope of this tutorial is to enhance the specifications of our working environment easily by using a VM provided by Google Cloud.
-[Virtual Machine Instance Creation using Google Cloud](https://github.com/ssideris/Data_Management_Concepts/tree/main/DataOps/Virtual%20Machine%20Instance%20Creation%20using%20Google%20Cloud.pdf)
+[Virtual Machine Instance Creation using Google Cloud](https://github.com/ssideris/Data_Management_and_Analytics_Operations/edit/main/DataOps/README.md)
 
 ### Setting up a Postgres Database using Docker in minutes
 
 The scope of this tutorial is to show how to set up a postgres database, use it and share it with others, in minutes, using an image provided by Docker Hub.
-[Deployment of a PostgreSQL Database using Docker](https://github.com/ssideris/Data_Management_Concepts/tree/main/DevOps/Deployment%20of%20a%20PostgreSQL%20Database%20using%20Docker)
+[Deployment of a PostgreSQL Database using Docker](https://github.com/ssideris/Data_Management_and_Analytics_Operations/edit/main/DataOps/README.md)
 
 ### What is Containerization via Docker and how it benefits Data Procedures
 
 The scope of this tutorial is to explain the concept of Containerization using Docker and how it benefits the streamlining of Data procedures.
-[Containerizing Python Scripts and Developing a Containers Network using Docker & Docker Compose](https://github.com/ssideris/Data_Management_Concepts/tree/main/DevOps/Containerizing%20Python%20Scripts%20and%20Developing%20a%20Containers%20Network%20using%20Docker%20%26%20Docker%20Compose)
+[Containerizing Python Scripts and Developing a Containers Network using Docker & Docker Compose](https://github.com/ssideris/Data_Management_and_Analytics_Operations/edit/main/DataOps/README.md)
 
 ### Monitoring a Flow-as-a-Code using Prefect
 
 The scope of this tutorial is to explain what is Flow-as-a-Code, how it benefits Data Pipelines over traditional Flows and how to effectively monitor them using Prefect.
-[Monitoring a Flow-as-a-Code using Prefect](https://github.com/ssideris/Data_Management_Concepts/tree/main/DevOps/Monitoring%20Flow-as-a-Code%20using%20Prefect)
+[Monitoring a Flow-as-a-Code using Prefect](https://github.com/ssideris/Data_Management_and_Analytics_Operations/edit/main/DataOps/README.md)
 
 ### Deploying a Flow-as-a-Code using Prefect
 
 The scope of this tutorial is to show the step-by-step deployment of a Flow-as-a-Code using Prefect, from scheduling and parameterization to containerization and version controlling.
-[Flow-as-a-Code Deployment using Prefect](https://github.com/ssideris/Data_Management_Concepts/tree/main/DevOps/Flow-as-a-Code%20Deployment%20using%20Prefect)
+[Flow-as-a-Code Deployment using Prefect](https://github.com/ssideris/Data_Management_and_Analytics_Operations/edit/main/DataOps/README.md)
 
 ### Using Google Cloud's Data Lake and Data Warehouse Capabilities 
 
