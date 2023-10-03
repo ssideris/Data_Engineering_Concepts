@@ -32,11 +32,11 @@ The scope of this tutorial is to show the step-by-step deployment of a Flow-as-a
 ### Using Google Cloud's Data Lake and Data Warehouse Capabilities 
 
 The scope of this tutorial is to harness the power of Google Cloud by loading Data to Cloud Storage and querying them using BigQuery.
-[Uploading Data on Google Cloud Storage and Querying them Using BigQuery](https://github.com/ssideris/Data_Management_Concepts/tree/main/DevOps/Uploading%20Data%20in%20Google%20Cloud%20Storage%20and%20Querying%20them%20using%20Big%20Query)
+[Uploading Data on Google Cloud Storage and Querying them Using BigQuery](https://github.com/ssideris/Data_Management_and_Analytics_Operations/edit/main/DataOps/README.md)
 
 ### Analytics Engineering using dbt
 
 The scope of this tutorial is to explaing the concept of Analytics Engineering and how it boosts the collaboration between data engineers and data analysts. The tool to be used is dbt.
-[Analytics Engineering using dbt](https://github.com/ssideris/Data_Management_Concepts/tree/main/DevOps/Analytics%20Engineering%20using%20dbt)
+[Analytics Engineering using dbt](https://github.com/ssideris/Data_Management_and_Analytics_Operations/edit/main/DataOps/README.md)
 
 ### Batch Processing using PySpark (UNDER CONSTRUCTION)
