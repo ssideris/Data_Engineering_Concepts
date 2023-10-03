@@ -14,7 +14,7 @@ The scope of this tutorial is to enhance the specifications of our working envir
 The scope of this tutorial is to show how to set up a postgres database, use it and share it with others, in minutes, using an image provided by Docker Hub:
 [Deployment of a PostgreSQL Database using Docker](https://github.com/ssideris/Data_Management_and_Analytics_Operations/tree/main/DataOps/Deployment%20of%20a%20PostgreSQL%20Database%20using%20Docker)
 
-### 3) What is Containerization via Docker and how it benefits Data Procedures
+### 3) What is Containerization via Docker and how to create a Network of Data Procedures - Containers
 
 The scope of this tutorial is to explain the concept of Containerization using Docker and how it benefits the streamlining of Data procedures:
 [Containerizing Python Scripts and Developing a Containers Network using Docker & Docker Compose](https://github.com/ssideris/Data_Management_and_Analytics_Operations/tree/main/DataOps/Containerizing%20Python%20Scripts%20and%20Developing%20a%20Containers%20Network%20using%20Docker%20%26%20Docker%20Compose)
