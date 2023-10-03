@@ -19,7 +19,7 @@ The scope of this tutorial is to show how to set up a postgres database, use it 
 The scope of this tutorial is to explain the concept of Containerization using Docker and how it benefits the streamlining of Data procedures:
 [Containerizing Python Scripts and Developing a Containers Network using Docker & Docker Compose](https://github.com/ssideris/Data_Management_and_Analytics_Operations/tree/main/DataOps/Containerizing%20Python%20Scripts%20and%20Developing%20a%20Containers%20Network%20using%20Docker%20%26%20Docker%20Compose)
 
-### 4) Monitoring a Flow-as-a-Code using Prefect
+### 4) What is Flow-as-a-Code and how to monitor it using Prefect
 
 The scope of this tutorial is to explain what is Flow-as-a-Code, how it benefits Data Pipelines over traditional Flows and how to effectively monitor them using Prefect:
 [Monitoring a Flow-as-a-Code using Prefect](https://github.com/ssideris/Data_Management_and_Analytics_Operations/tree/main/DataOps/Flow-as-a-Code%20Monitoring%20using%20Prefect)
